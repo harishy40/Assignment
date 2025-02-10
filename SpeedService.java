@@ -16,7 +16,7 @@ public class SpeedService {
         activeRentals.put(rental.getCarId(), rental);
     }
 
-    public void processEventUtils(EventData event) {
+    public void processSpeedData(SpeedData event) {
         if (!activeRentals.containsKey(event.getCarId())) {
             System.out.println(" No rental found for car: " + event.getCarId());
             return;

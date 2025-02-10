@@ -15,10 +15,10 @@ public class Main {
         speedMonitor.registerRental(rental1);
         speedMonitor.registerRental(rental2);
 
-        SpeedData event1 = new SpeedData("CAR1", 110, System.currentTimeMillis()); // Exceeds UserA's limit (100)
-        SpeedData event2 = new SpeedData("CAR2", 110, System.currentTimeMillis()); // Within UserB's limit (120)
+        SpeedData event1 = new SpeedData("CAR1", 110, System.currentTimeMillis()); // Exceeds customerA's limit (100)
+        SpeedData event2 = new SpeedData("CAR2", 110, System.currentTimeMillis()); // Within customerB's limit (120)
 
-        speedMonitor.processEventUtils(event1);
-        speedMonitor.processEventUtils(event2);
+        speedMonitor.processSpeedData(event1);
+        speedMonitor.processSpeedData(event2);
     }
 }
